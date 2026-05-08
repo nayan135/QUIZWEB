@@ -11,3 +11,9 @@ displayQuestion(): displays the fetched question
 nextQuestion():moves to the next question
 submit(): registers the answer, tracks the score and move to next question 
 timer(): sets 10sec timer for each question and moves to next if user fails to answer in that time frame 
+
+score meahanism for now :
+default :0 
+correct Answer : +1 
+wrong answer : -0.5
+unselected = +_0
