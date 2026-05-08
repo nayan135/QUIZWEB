@@ -91,18 +91,13 @@ function displayTimer(){
 
             document.getElementById("timer")
                 .innerText = timeLeft;
-
+//nayaannn hehe 
             if (timeLeft <= 0) {
-
                 clearInterval(timer);
-
                 alert("Time is up!");
-
                 nextQuestion();
             }
-
         }, 1000);
-
 }
     function submitAnswer(){
     const question = questions[currentQuestion];
@@ -117,6 +112,7 @@ function displayTimer(){
         score++;
         document.getElementById("score").innerText = score;
     }
+    
 
     nextQuestion();
 }
