@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "QUIZWEB/1.0.0": {
+        "runtime": {
+          "QUIZWEB.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "QUIZWEB/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
