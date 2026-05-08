@@ -52,12 +52,15 @@
 <script>
     let questions =[];
     let currentQuestion= 0;
+    let score = 0;
+
     async function loadquestion(){
         const response = await fetch('/data/question.json');
         questions = await response.json();
         displayQueston();
 
     }
+
     function displayQueston(){
            clearInterval(timer);
             timeLeft = 10;
@@ -73,7 +76,7 @@
         question.option.forEach((option, index)=>{
             optionsContainer.innerHTML +=`
      <div class="form-check mb-3">
-                    <input class="form-check-input" type="${question.type}" name="answer" id="option${index}">
+                    <input class="form-check-input" type="${question.type}" value="${option}" name="answer" id="option${index}">
                     <label class="form-check-label" for="option${index}">
                       ${option}
                     </label>
@@ -102,20 +105,31 @@ function displayTimer(){
     function submitAnswer(){
     const question = questions[currentQuestion];
     const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+     
+
     
     if (!selectedAnswer) {
         alert('Please select an answer');
         return;
     }
+ console.log(selectedAnswer.value);
+  console.log(question.answer);
+     if(selectedAnswer.value === question.answer){
+             score= score +1;
+             console.log("why not here ");
+        
+        }
+        if (selectedAnswer.value != question.answer){
+            score = score - 0.5;
+        }
 
-    if (selectedAnswer.value === question.answer) {
-        score++;
-        document.getElementById("score").innerText = score;
-    }
-    
-
+    document.getElementById("score").innerText = score;
+        console.log(score);
+//scoretrack();
     nextQuestion();
 }
+
+
 
     function nextQuestion(){
         currentQuestion ++;
@@ -123,7 +137,8 @@ function displayTimer(){
             displayQueston();
         }else{
             document.querySelector(".card").innerHTML=
-            "<h2>QUIZ COMPLETED</h2> <h3> Score </h3>"
+            `<h2>QUIZ COMPLETED</h2>
+             <h3> Score <span id="score">${score}</span></h3>`
         }
     }
 
