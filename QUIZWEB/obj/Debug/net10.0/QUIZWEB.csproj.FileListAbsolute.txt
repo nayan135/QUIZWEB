@@ -96,4 +96,4 @@ C:\Users\Dell\Downloads\QUIZWEB\QUIZWEB\obj\Debug\net10.0\QUIZWEB.pdb
 C:\Users\Dell\Downloads\QUIZWEB\QUIZWEB\obj\Debug\net10.0\QUIZWEB.genruntimeconfig.cache
 C:\Users\Dell\Downloads\QUIZWEB\QUIZWEB\obj\Debug\net10.0\ref\QUIZWEB.dll
 C:\Users\Dell\Downloads\QUIZWEB\QUIZWEB\obj\Debug\net10.0\QUIZWEB.sourcelink.json
-C:\Users\Dell\Downloads\QUIZWEB\QUIZWEB\obj\Debug\net10.0\compressed\d30yq0lh0e-{0}-gg3pp02y6n-gg3pp02y6n.gz
+C:\Users\Dell\Downloads\QUIZWEB\QUIZWEB\obj\Debug\net10.0\compressed\d30yq0lh0e-{0}-5wtohddpu5-5wtohddpu5.gz

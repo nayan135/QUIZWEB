@@ -9,10 +9,12 @@
 <div>
     <quiz>
         <div class="card shadow-lg border-0 rounded-4">
+            <div class="d-flex justify-content-between mb-3">
             <div class="card-header bg-dark text-white rounded-top-4">
                    <h4 class="mb-0">
                 Question <span id="questionNumber">1</span>
             </h4>
+            <div class="text-danger"> Time Left: <span id="timer">10</span>s</div>
 
             </div>
               <div class="card-body p-4">
@@ -25,9 +27,6 @@
                 <h3 id="optionsContainer" ></h3>
  <div class="d-flex justify-content-between">
 
-                    <button type="button" class="btn btn-secondary px-4">
-                        Previous
-                    </button>
 
                     <button type="button" class="btn btn-success purple px-4" onclick="submitAnswer()">
                         Submit Answer
@@ -60,7 +59,12 @@
 
     }
     function displayQueston(){
+           clearInterval(timer);
+            timeLeft = 10;
+             document.getElementById("timer")
+            .innerText = timeLeft;
         const question = questions[currentQuestion];
+        document.getElementById("questionNumber").innerText = question.id;
 
                 document.getElementById("questionText").innerText = question.question;
 
@@ -76,8 +80,30 @@
                 </div>
     `;
         });
+        displayTimer();
     }
 
+
+function displayTimer(){
+     timer = setInterval(() => {
+
+            timeLeft--;
+
+            document.getElementById("timer")
+                .innerText = timeLeft;
+
+            if (timeLeft <= 0) {
+
+                clearInterval(timer);
+
+                alert("Time is up!");
+
+                nextQuestion();
+            }
+
+        }, 1000);
+
+}
     function submitAnswer(){
     const question = questions[currentQuestion];
     const selectedAnswer = document.querySelector('input[name="answer"]:checked');
@@ -101,7 +127,7 @@
             displayQueston();
         }else{
             document.querySelector(".card").innerHTML=
-            "<h2>QUIZ COMPLETED</h2>"
+            "<h2>QUIZ COMPLETED</h2> <h3> Score </h3>"
         }
     }
 

@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "question": "What is the correct fjjile extension for C#?",
+    "question": "What is the correct extension for C#?",
     "type": "radio",
     "option": [".java", ".cs", ".cpp", ".py"],
     "answer": ".cs"
