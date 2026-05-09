@@ -37,6 +37,12 @@ let timeLeft = 10;
     function displayQueston(){
          document.querySelector(".card").innerHTML=
          ` <div class="d-flex justify-content-between mb-3">
+         <div class= "progress mt-2" style="height 5px;">
+         <div class="progress-bar progress-bar-striped progress-bar-animated bg-sad" role="progressbar"
+         style="width: ${((currentQuestion+1)/ questions.length)*100}%">
+         
+          </div>
+          </div>
             <div class="card-header bg-dark text-white rounded-top-4">
                    <h4 class="mb-0">
                 Question <span id="questionNumber">1</span>
