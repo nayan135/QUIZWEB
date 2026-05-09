@@ -9,7 +9,34 @@
 <div>
     <quiz>
         <div class="card shadow-lg border-0 rounded-4">
-            <div class="d-flex justify-content-between mb-3">
+  
+  </div>
+    </quiz>
+</div>
+
+<script>
+
+    let questions =[];
+    let currentQuestion= 0;
+    let score = 0;
+    let timer=0;
+let timeLeft = 10;
+
+    async function loadquestion(){
+        const response = await fetch('/data/question.json');
+        questions = await response.json();
+         document.querySelector(".card").innerHTML=
+         `
+         <h1>Welcome to the C# quiz App developed using .Net </h1>
+         <button type="button" value="Start" class="btn btn-success purple px-4 btn-sm" onclick="displayQueston()">Start</button>
+         `;
+
+    }
+   
+//displayQueston not Question heheeee
+    function displayQueston(){
+         document.querySelector(".card").innerHTML=
+         ` <div class="d-flex justify-content-between mb-3">
             <div class="card-header bg-dark text-white rounded-top-4">
                    <h4 class="mb-0">
                 Question <span id="questionNumber">1</span>
@@ -43,27 +70,10 @@
         
 
                <div class="card-footer text-muted text-center">
-            Score: <span id="score">0</span>
+            Score: <span id="score">${score}</span>
         </div>
 
-
-        </div>
-    </quiz>
-</div>
-
-<script>
-    let questions =[];
-    let currentQuestion= 0;
-    let score = 0;
-
-    async function loadquestion(){
-        const response = await fetch('/data/question.json');
-        questions = await response.json();
-        displayQueston();
-
-    }
-
-    function displayQueston(){
+         `;
            clearInterval(timer);
             timeLeft = 10;
              document.getElementById("timer")
@@ -104,6 +114,8 @@ function displayTimer(){
             }
         }, 1000);
 }
+
+
     function submitAnswer(){
     const question = questions[currentQuestion];
     const selectedAnswer = document.querySelector('input[name="answer"]:checked');
@@ -143,6 +155,6 @@ function displayTimer(){
              <h3> Score <span id="score">${score}</span></h3>`
         }
     }
-
-    loadquestion();
+loadquestion();
+ 
 </script>
