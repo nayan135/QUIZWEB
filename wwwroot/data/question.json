@@ -8,10 +8,64 @@
   },
    {
     "id": 2,
-    "question": "What is the correccct fjjile extension for C#?",
+    "question": "Which keyword is used to define a class in C#?",
     "type": "radio",
-    "option": [".java", ".cs", ".cpp", ".py"],
-    "answer": ".cs"
+    "option": ["function", "class", "object", "CLASS"],
+    "answer": "class"
+  },
+   {
+    "id": 3,
+    "question": "Which method is the entry point of a C# console application?",
+    "type": "radio",
+    "option": ["Start()", "Run()", "Main()", "Init()"],
+    "answer": "Main()"
+  },
+      {
+    "id": 4,
+    "question": "Which is the symbol used to end a statement in C#",
+    "type": "radio",
+    "option": [",", ".", ":", ";"],
+    "answer": ";"
+  },
+    {
+    "id": 5,
+    "question": "Which data type is used to store whole number in C#",
+    "type": "radio",
+    "option": ["int", "char", "boolean", "float"],
+    "answer": "int"
+  }, {
+    "id": 6,
+    "question": "Which keyword is used to create an object in C#?",
+    "type": "radio",
+    "option": ["make", "new", "create", "object"],
+    "answer": "new"
+  },
+  {
+    "id": 7,
+    "question": "Which loop is guaranteed to execute at least once in C#?",
+    "type": "radio",
+    "option": ["for", "while", "foreach", "do-while"],
+    "answer": "do-while"
+  }, 
+  {
+    "id": 8,
+    "question": "Which keyword is used for inheritance in C#?",
+    "type": "radio",
+    "option": ["inherits", "extends", ":", "base"],
+    "answer": ":"
+  },
+  {
+    "id": 9,
+    "question": "Which namespace contains basic input/output classes in C#?",
+    "type": "radio",
+    "option": ["System", "ConsoleApp", "Microsoft", "Core"],
+    "answer": "System"
+  },
+  {
+    "id": 10,
+    "question": "Which class is commonly used for console output in C#?",
+    "type": "radio",
+    "option": ["Printer", "Output", "Console", "Display"],
+    "answer": "Console"
   }
-  
 ]

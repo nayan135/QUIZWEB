@@ -17,3 +17,13 @@ default :0
 correct Answer : +1 
 wrong answer : -0.5
 unselected = +_0
+
+
+
+# writing it for myself 
+
+
+
+## deploying it in nest 
+    
+

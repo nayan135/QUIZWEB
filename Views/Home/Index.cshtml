@@ -20,11 +20,13 @@
     let currentQuestion= 0;
     let score = 0;
     let timer=0;
+    let index=0;
 let timeLeft = 10;
 
     async function loadquestion(){
         const response = await fetch('/data/question.json');
-        questions = await response.json();
+                questions = await response.json();
+        questions.sort(() => Math.random() - 0.5);
          document.querySelector(".card").innerHTML=
          `
          <h1>Welcome to the C# quiz App developed using .Net </h1>
@@ -85,7 +87,8 @@ let timeLeft = 10;
              document.getElementById("timer")
             .innerText = timeLeft;
         const question = questions[currentQuestion];
-        document.getElementById("questionNumber").innerText = question.id;
+        index+=1;
+        document.getElementById("questionNumber").innerText = index;
 
                 document.getElementById("questionText").innerText = question.question;
 
@@ -103,7 +106,7 @@ let timeLeft = 10;
         });
         displayTimer();
     }
-
+    
 
 function displayTimer(){
      timer = setInterval(() => {
@@ -143,6 +146,7 @@ function displayTimer(){
             score = score - 0.5;
         }
 
+//whatttttt
     document.getElementById("score").innerText = score;
         console.log(score);
 //scoretrack();
@@ -161,6 +165,10 @@ function displayTimer(){
              <h3> Score <span id="score">${score}</span></h3>`
         }
     }
+
 loadquestion();
  
 </script>
+
+
+  
