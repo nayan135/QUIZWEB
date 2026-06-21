@@ -26,7 +26,11 @@ unselected = +_0
 # To run
 `
 git clone https://github.com/nayan135/QUIZWEB
+`
+`
 cd quizweb
+`
+`
 dotnet run
 `
 
