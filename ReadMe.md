@@ -23,7 +23,15 @@ unselected = +_0
 # writing it for myself 
 
 
+# To run
+`
+git clone https://github.com/nayan135/QUIZWEB
+cd quizweb
+dotnet run
+`
+
+
 
 ## deploying it in nest 
-    
+ skipped for now    
 
